@@ -8,7 +8,7 @@ if (!usuarioLogueado) {
     document.body.style.visibility = "visible";
 }
 
-const API_URL = "https://inventario-backend-eqe7.onrender.com";
+const API_URL = "https://inventario-backend.onrender.com/api";";
 
 let productDataCache = {};
 let resumenFinancieroChart, tendenciasChart;
