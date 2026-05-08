@@ -11,7 +11,7 @@ async function registrar() {
     }
 
     try {
-        const response = await fetch("http://localhost:8080/api/usuarios/register", {
+        const response = await fetch("https://inventario-backend-eqe7.onrender.com/api/usuarios/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

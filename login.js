@@ -3,7 +3,7 @@ async function login() {
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("http://localhost:8080/api/usuarios/login", {
+        const response = await fetch("https://inventario-backend-eqe7.onrender.com/api/usuarios/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
