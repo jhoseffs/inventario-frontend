@@ -1,21 +1,23 @@
-    // ✅ ASÍ DEBE QUEDAR — primeras líneas del JS de index.html
-    document.body.style.visibility = "hidden";  // ← AGREGAR ESTA LÍNEA PRIMERO
-    const usuarioLogueado = localStorage.getItem("usuario");
+document.body.style.visibility = "hidden";
 
-    if (!usuarioLogueado) {
-        window.location.href = "login.html";
-    }else {
-    document.body.style.visibility = "visible";  // ← mostrar solo si hay sesión
-    }
-     const API_URL = "http://localhost:8080/api"; // Cambia esto si tu backend está en otra URL o puerto
-        let productDataCache = {};
-        let resumenFinancieroChart, tendenciasChart;
+const usuarioLogueado = localStorage.getItem("usuario");
 
-        document.addEventListener('DOMContentLoaded', () => {
-            setupNavigation();
-            loadInitialData();
-            setupForms();
-        });
+if (!usuarioLogueado) {
+    window.location.href = "login.html";
+} else {
+    document.body.style.visibility = "visible";
+}
+
+const API_URL = "https://inventario-backend-eqe7.onrender.com";
+
+let productDataCache = {};
+let resumenFinancieroChart, tendenciasChart;
+
+document.addEventListener('DOMContentLoaded', () => {
+    setupNavigation();
+    loadInitialData();
+    setupForms();
+});
         
         function setupNavigation() {
             const navLinks = document.querySelectorAll('.sidebar-nav a');
